@@ -1,240 +1,193 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Nunito:wght@400;500;600&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --brand:#1A6B3C;--brand-light:#E8F5EE;--brand-mid:#2E9B5B;--brand-dark:#0F4A28;
-  --accent:#F5A623;--accent-light:#FEF3E2;
-  --text:#1a1a1a;--text2:#555;--text3:#888;
-  --border:#e2e8f0;--surface:#f8faf9;--white:#fff;
-  --max:900px;
-}
-body{font-family:'Nunito',sans-serif;color:var(--text);background:var(--white);font-size:15px;line-height:1.7}
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-img{max-width:100%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cbseparent.in — CBSE Age Eligibility Calculator, KV Schools, Scholarships & Parent Guide</title>
+<meta name="description" content="India's #1 free CBSE parent resource. Calculate your child's school eligibility age, explore KV & Army school admission guides, scholarships, and board exam tips.">
+<meta name="keywords" content="CBSE age eligibility, CBSE admission, KV school admission, army school, CBSE scholarship, NMMS, CBSE class 1 age, cbse parent guide">
+<meta property="og:title" content="cbseparent.in — CBSE Parent Guide"><meta property="og:description" content="Free CBSE age calculator + KV schools, army schools, scholarships and board exam guides for Indian parents."><meta property="og:type" content="website"><meta property="og:url" content="https://cbseparent.in">
+<link rel="canonical" href="https://cbseparent.in">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="nav-logo"><span class="logo-cbse">cbse</span><span class="logo-parent">parent</span><span class="logo-dot">.</span><span class="logo-in">in</span></a>
+<div class="nav-links">
+<a href="index.html" class="active">Home</a>
+<a href="age-eligibility.html">Age Guide</a>
+<a href="kv-schools.html">KV Schools</a>
+<a href="army-schools.html">Army Schools</a>
+<a href="scholarships.html">Scholarships</a>
+<a href="board-exams.html">Board Exams</a>
+<a href="after-class10.html">After Class 10</a>
+<a href="blog.html" class="nav-cta">Blog</a>
+</div>
+<button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav" id="mobile-nav">
+<a href="index.html">🏠 Home</a><a href="age-eligibility.html">📅 Age Eligibility</a><a href="kv-schools.html">🏫 KV Schools</a><a href="army-schools.html">⭐ Army Schools</a><a href="scholarships.html">🎓 Scholarships</a><a href="board-exams.html">📝 Board Exams</a><a href="cbse-vs-icse.html">⚖️ CBSE vs ICSE</a><a href="after-class10.html">🚀 After Class 10</a><a href="cuet-guide.html">🎯 CUET Guide</a><a href="study-tips.html">💡 Study Tips</a><a href="blog.html">📰 Blog</a>
+</div>
+</nav>
+<div class="coming-soon-banner">
+<p><em>APP COMING SOON</em> Our free CBSE Parent app is almost ready! <button class="notify-btn" onclick="document.getElementById('notify-section').scrollIntoView({behavior:'smooth'})"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0F4A28" stroke-width="2.5" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>Notify Me</button></p>
+</div>
 
-/* NAV */
-nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.nav-inner{max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
-.nav-logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;color:var(--brand-dark);display:inline-flex;align-items:baseline;gap:0;line-height:1;text-decoration:none;flex-shrink:0;white-space:nowrap}
-.nav-logo .logo-cbse{color:var(--brand-dark)}
-.nav-logo .logo-parent{color:var(--brand-mid)}
-.nav-logo .logo-dot{color:var(--accent)}
-.nav-logo .logo-in{color:var(--text3);font-size:0.95rem}
-.nav-links{display:flex;gap:2px;align-items:center;flex-wrap:nowrap}
-.nav-links a{font-size:12px;font-weight:600;color:var(--text2);padding:5px 6px;border-radius:8px;font-family:'Sora',sans-serif;white-space:nowrap}
-.nav-links a:hover{background:var(--brand-light);color:var(--brand);text-decoration:none}
-.nav-links a.active{color:var(--brand);background:var(--brand-light)}
-.nav-cta{background:var(--brand);color:#fff!important;border-radius:8px;padding:7px 14px!important}
-.nav-cta:hover{background:var(--brand-dark)!important;color:#fff!important}
-.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px}
-.mobile-nav{display:none;background:#fff;border-bottom:1px solid var(--border);padding:1rem 1.5rem}
-.mobile-nav a{display:block;padding:10px 0;font-size:14px;font-weight:600;color:var(--text2);border-bottom:1px solid var(--border);font-family:'Sora',sans-serif}
-.mobile-nav a:last-child{border-bottom:none}
+<div class="hero">
+<div class="hero-inner">
+<div class="hero-badge"><span>Free Tool for Indian Parents</span></div>
+<h1>Know exactly when your child is <em>school-ready</em></h1>
+<p>CBSE age eligibility calculator, KV & Army school admission guides, scholarships decoded — all free, no login needed.</p>
+<div class="hero-btns">
+<a href="#calculator" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F4A28" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Try Age Calculator</a>
+<a href="blog.html" class="btn-secondary">Read Parent Blog</a>
+</div>
+<p class="hero-note">App coming soon on Google Play · No ads · Works offline</p>
+</div>
+</div>
 
-/* COMING SOON BANNER */
-.coming-soon-banner{background:linear-gradient(90deg,#0F4A28,#2E9B5B);padding:12px 1.5rem;text-align:center}
-.coming-soon-banner p{color:#fff;font-size:13px;font-weight:600;font-family:'Sora',sans-serif}
-.coming-soon-banner em{font-style:normal;background:var(--accent);color:#fff;border-radius:6px;padding:2px 8px;margin-right:6px;font-size:11px;letter-spacing:0.5px}
-.notify-btn{display:inline-block;background:#fff;color:var(--brand-dark);border-radius:6px;padding:4px 12px;font-size:12px;font-weight:700;margin-left:10px;font-family:'Sora',sans-serif;cursor:pointer;border:none}
+<div class="stats-bar">
+<div class="stats-inner">
+<div class="stat-item"><div class="stat-num">27,000+</div><div class="stat-label">CBSE Schools in India</div></div>
+<div class="stat-item"><div class="stat-num">1,250+</div><div class="stat-label">Kendriya Vidyalayas</div></div>
+<div class="stat-item"><div class="stat-num">137</div><div class="stat-label">Army Public Schools</div></div>
+<div class="stat-item"><div class="stat-num">₹12,000</div><div class="stat-label">NMMS Scholarship/Year</div></div>
+</div>
+</div>
 
-/* HERO */
-.hero{background:linear-gradient(135deg,#0F4A28 0%,#1A6B3C 55%,#2E9B5B 100%);padding:4rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.04)}
-.hero::after{content:'';position:absolute;bottom:-100px;left:-50px;width:250px;height:250px;border-radius:50%;background:rgba(255,255,255,0.03)}
-.hero-inner{max-width:600px;margin:0 auto;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:6px 14px;margin-bottom:1.5rem}
-.hero-badge span{color:#7ECFA0;font-size:13px;font-family:'Sora',sans-serif;font-weight:600}
-.hero h1{font-family:'Sora',sans-serif;font-size:2.3rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:1rem}
-.hero h1 em{font-style:normal;color:#7ECFA0}
-.hero p{color:rgba(255,255,255,0.8);font-size:1rem;margin-bottom:2rem;line-height:1.7}
-.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--brand-dark);border-radius:12px;padding:13px 22px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;border:none;cursor:pointer;text-decoration:none}
-.btn-primary:hover{background:#f0fdf4;text-decoration:none}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4);border-radius:12px;padding:13px 22px;font-family:'Sora',sans-serif;font-weight:600;font-size:14px;cursor:pointer;text-decoration:none}
-.btn-secondary:hover{border-color:rgba(255,255,255,0.8);text-decoration:none}
-.hero-note{margin-top:1rem;color:rgba(255,255,255,0.45);font-size:12px}
+<div class="calc-float" id="calculator">
+<div class="calc-card">
+<h2>🎯 CBSE School Readiness Calculator</h2>
+<p class="sub">Enter your child's date of birth — get the complete academic timeline with admission years</p>
+<div class="dob-row">
+<input type="date" id="dob-input" max="2025-12-31" placeholder="Child's Date of Birth">
+<button onclick="calcTimeline()">Calculate Timeline</button>
+</div>
+<div id="calc-result">
+<p class="result-title">Your child's academic journey</p>
+<div class="timeline" id="timeline-grid"></div>
+<p style="font-size:12px;color:var(--text3);margin-top:10px">* Based on CBSE standard age cutoff of 31st March. Individual schools may vary.</p>
+</div>
+</div>
+</div>
 
-/* STATS BAR */
-.stats-bar{background:#fff;border-bottom:1px solid var(--border);padding:1.25rem 1.5rem}
-.stats-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-around;flex-wrap:wrap;gap:1rem}
-.stat-item{text-align:center}
-.stat-num{font-family:'Sora',sans-serif;font-size:1.4rem;font-weight:700;color:var(--brand)}
-.stat-label{font-size:12px;color:var(--text3)}
+<div class="page-wrap">
+<div class="section">
+<p class="section-label">Everything you need</p>
+<div class="section-title">CBSE Parent Resource Hub</div>
+<p class="section-sub">Trusted guides written for Indian parents navigating CBSE schools, admissions, exams, and scholarships.</p>
+<div class="card-grid">
+<a href="age-eligibility.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<h3>Age Eligibility Guide</h3>
+<p>Complete CBSE age cutoff rules for Pre-KG to Class 12. Know exactly when your child can enrol.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="kv-schools.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+<h3>KV Schools Complete Guide</h3>
+<p>Priority list, lottery system, fees, and step-by-step online application for Kendriya Vidyalayas.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="army-schools.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<h3>Army & Defence Schools</h3>
+<p>APS, RMS, and Sainik School admission guide for defence families and civilians.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="scholarships.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+<h3>Scholarships Guide</h3>
+<p>NMMS, CSSS, Single Girl Child, NSP — all scholarships your CBSE child can apply for.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="board-exams.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+<h3>Board Exam Guide</h3>
+<p>Class 10 & 12 exam dates, passing criteria, compartment rules, and result checking.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="cbse-vs-icse.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+<h3>CBSE vs ICSE vs State Board</h3>
+<p>Detailed comparison to help you choose the right board for your child's future.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="after-class10.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+<h3>After Class 10 Guide</h3>
+<p>Science, Commerce or Arts? Stream selection guide with career paths explained for parents.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="cuet-guide.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<h3>CUET Guide for Parents</h3>
+<p>What is CUET, how it works, and how to prepare your child for central university admissions.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="study-tips.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+<h3>Study Tips & Timetables</h3>
+<p>Proven study strategies, timetable templates, and stress management tips for CBSE students.</p>
+<span class="card-link">Read guide →</span>
+</a>
+</div>
+</div>
 
-/* PAGE WRAPPER */
-.page-wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
-.section{padding:3rem 0}
-.section-sm{padding:2rem 0}
-.section-label{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--brand-mid);margin-bottom:6px}
-.section-title{font-family:'Sora',sans-serif;font-size:1.6rem;font-weight:700;color:var(--brand-dark);margin-bottom:0.5rem}
-.section-sub{font-size:14px;color:var(--text2);margin-bottom:2rem;line-height:1.7;max-width:600px}
+<div class="section" style="padding-top:0">
+<p class="section-label">Latest from the blog</p>
+<div class="section-title">News, Tips & Updates</div>
+<p class="section-sub">Fresh content for CBSE parents and students every week.</p>
+<div class="blog-grid">
+<a href="blog/cbse-two-board-exams-2026.html" class="blog-card" style="text-decoration:none">
+<div class="blog-card-body"><span class="blog-tag news">News</span><h3>CBSE to Conduct Two Board Exams Per Year from 2025–26</h3><p>Everything parents need to know about the new dual-exam pattern announced by CBSE.</p></div>
+<div class="blog-card-meta"><span>Dec 2024</span><span>5 min read</span></div>
+</a>
+<a href="blog/kv-admission-2025-tips.html" class="blog-card" style="text-decoration:none">
+<div class="blog-card-body"><span class="blog-tag kv">KV</span><h3>KV Admission 2025–26: 10 Tips to Maximise Your Child's Chances</h3><p>Practical advice from parents who successfully got their children into Kendriya Vidyalayas.</p></div>
+<div class="blog-card-meta"><span>Nov 2024</span><span>7 min read</span></div>
+</a>
+<a href="blog/nmms-scholarship-guide.html" class="blog-card" style="text-decoration:none">
+<div class="blog-card-body"><span class="blog-tag scholarship">Scholarship</span><h3>NMMS 2025: Complete Guide — Eligibility, Exam Date & How to Apply</h3><p>Step-by-step guide to help your Class 8 child apply for the ₹12,000/year NMMS scholarship.</p></div>
+<div class="blog-card-meta"><span>Oct 2024</span><span>8 min read</span></div>
+</a>
+</div>
+<div style="text-align:center;margin-top:1.5rem"><a href="blog.html" class="btn-primary" style="display:inline-flex">View All 100+ Articles →</a></div>
+</div>
 
-/* CARDS */
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.25rem}
-.card:hover{border-color:#A7D9B8;box-shadow:0 4px 20px rgba(26,107,60,0.08)}
-.card-icon{width:44px;height:44px;border-radius:12px;background:var(--brand-light);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
-.card-icon svg{width:22px;height:22px}
-.card h3{font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--brand-dark);margin-bottom:6px}
-.card p{font-size:13px;color:var(--text2);line-height:1.5}
-.card-link{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;color:var(--brand-mid);font-family:'Sora',sans-serif}
+<div class="section" style="padding-top:0">
+<p class="section-label">Common questions</p>
+<div class="section-title">Parents Ask Us</div>
+<div class="faq-list">
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the minimum age for Class 1 in CBSE schools?<span class="toggle">+</span></div><div class="faq-a">As per CBSE norms, a child must be at least 6 years old as of 31st March of the admission year to enrol in Class 1. For Pre-KG the minimum is 3 years, LKG is 4 years, and UKG is 5 years. Private affiliated schools may set higher minimum ages but cannot go below the CBSE minimum.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How does the KV lottery system work?<span class="toggle">+</span></div><div class="faq-a">When more children apply than seats available within a priority category, KV conducts a computerised lottery. The lottery is transparent and results are published on the KVS portal. Priority 1 (service children) seats are filled first, then Priority 2, and so on. Lottery is held category-wise, not across all applicants together.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between CBSE and ICSE boards?<span class="toggle">+</span></div><div class="faq-a">CBSE (Central Board of Secondary Education) is run by the central government, follows NCERT syllabus, and is accepted across all central universities. ICSE (Indian Certificate of Secondary Education) is run by CISCE, has a broader syllabus with more emphasis on English. CBSE is better for competitive exams like JEE/NEET; ICSE is better for students going abroad or pursuing humanities.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which scholarships are available for CBSE Class 8 students?<span class="toggle">+</span></div><div class="faq-a">The most important scholarship for Class 8 students is NMMS (National Means-cum-Merit Scholarship), which provides ₹12,000/year for Class 9–12. Students from economically weaker sections with at least 55% marks in Class 7 are eligible. The state-level exam is held every year in November–December.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can a civilian child get admission in Army Public Schools?<span class="toggle">+</span></div><div class="faq-a">Yes, civilian children can get admission in Army Public Schools (APS) but only in the general category, which is limited to 25–30% of total seats after defence children are accommodated. RMS (Rashtriya Military Schools) also reserves a small percentage of seats for civilian boys. The entrance exam for APS is the All India Army Public Schools Common Entrance Exam (AISCE).</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What happens if a child fails the CBSE Class 10 board exam?<span class="toggle">+</span></div><div class="faq-a">If a student fails in 1–2 subjects in CBSE Class 10, they are eligible for the Compartment Exam held in July. If they pass the compartment exam, they receive a passing certificate. If they fail in 3 or more subjects, they must repeat Class 10. CBSE also has an improvement exam option for students who want to improve their marks.</div></div>
+</div>
+</div>
 
-/* CALCULATOR */
-.calc-float{margin:-2.5rem auto 0;max-width:660px;position:relative;z-index:10;padding:0 1.5rem}
-.calc-card{background:#fff;border-radius:20px;box-shadow:0 8px 40px rgba(0,0,0,0.12);padding:2rem}
-.calc-card h2{font-family:'Sora',sans-serif;font-size:1.15rem;font-weight:700;color:var(--brand-dark);margin-bottom:4px}
-.calc-card .sub{font-size:13px;color:var(--text3);margin-bottom:1.25rem}
-.dob-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
-.dob-row input[type=date]{flex:1;min-width:160px;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:'Nunito',sans-serif;font-size:14px;color:var(--text);background:var(--surface)}
-.dob-row button{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:11px 24px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;cursor:pointer}
-.dob-row button:hover{background:var(--brand-dark)}
-#calc-result{margin-top:1.5rem;display:none}
-.result-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text3);margin-bottom:10px}
-.timeline{display:grid;gap:8px}
-.tl-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;background:var(--brand-light);border:1px solid #C3E6D2}
-.tl-dot{width:34px;height:34px;border-radius:8px;background:var(--brand);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700;color:#fff;font-family:'Sora',sans-serif}
-.tl-info{flex:1}
-.tl-class{font-size:13px;font-weight:600;color:var(--brand-dark)}
-.tl-year{font-size:12px;color:var(--text3)}
-.tl-age{font-size:12px;font-weight:600;color:var(--brand-mid);white-space:nowrap}
-.tl-now{background:var(--accent-light)!important;border-color:#F5D080!important}
-.tl-now .tl-dot{background:var(--accent)!important}
-.tl-now .tl-class{color:#7A4D00!important}
+<div class="cta-box" id="notify-section">
+<h2>📱 App Launching Soon on Google Play</h2>
+<p>Get notified the moment our free CBSE Parent app goes live. Age calculator, offline access, push alerts for admission deadlines.</p>
+<form class="notify-form" onsubmit="submitNotify(event)">
+<input type="email" id="notify-email" placeholder="your@email.com" required>
+<button type="submit"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>Notify Me</button>
+</form>
+</div>
+</div>
 
-/* ACCORDION / FAQ */
-.faq-list{display:grid;gap:10px}
-.faq-item{border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.faq-q{padding:14px 16px;font-size:14px;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;gap:10px}
-.faq-q .toggle{color:var(--text3);font-size:18px;flex-shrink:0;transition:transform 0.2s;line-height:1}
-.faq-a{padding:0 16px;font-size:13px;color:var(--text2);line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s;background:var(--surface)}
-.faq-a.open{max-height:300px;padding:12px 16px}
-.faq-q.open .toggle{transform:rotate(45deg)}
-
-/* TABS */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem}
-.tab{padding:7px 16px;border-radius:100px;font-size:13px;font-weight:600;border:1.5px solid var(--border);cursor:pointer;font-family:'Sora',sans-serif;color:var(--text2);background:#fff}
-.tab:hover{border-color:var(--brand-mid);color:var(--brand)}
-.tab.active{background:var(--brand);color:#fff;border-color:var(--brand)}
-.tab-content{display:none;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
-.tab-content.active{display:block}
-.tab-content h3{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--brand-dark);margin-bottom:10px}
-.tab-content ul{list-style:none;display:grid;gap:8px}
-.tab-content li{font-size:13px;color:var(--text2);display:flex;gap:10px}
-.tab-content li::before{content:'→';color:var(--brand-mid);font-weight:700;flex-shrink:0}
-
-/* BLOG CARDS */
-.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
-.blog-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow 0.2s}
-.blog-card:hover{box-shadow:0 4px 24px rgba(0,0,0,0.1);text-decoration:none}
-.blog-card-body{padding:1.25rem}
-.blog-tag{display:inline-block;background:var(--brand-light);color:var(--brand);font-size:11px;font-weight:700;padding:3px 10px;border-radius:100px;margin-bottom:10px;font-family:'Sora',sans-serif}
-.blog-tag.exam{background:#EFF6FF;color:#1E3A8A}
-.blog-tag.scholarship{background:#FFFBF0;color:#7A4D00}
-.blog-tag.kv{background:#F5F3FF;color:#4C1D95}
-.blog-tag.army{background:#FFF1F2;color:#881337}
-.blog-tag.tips{background:#F0FDF4;color:#14532D}
-.blog-tag.news{background:#FEF3C7;color:#78350F}
-.blog-card h3{font-family:'Sora',sans-serif;font-size:14px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:8px}
-.blog-card p{font-size:12px;color:var(--text3);line-height:1.5}
-.blog-card-meta{padding:10px 1.25rem;border-top:1px solid var(--border);font-size:11px;color:var(--text3);display:flex;justify-content:space-between}
-
-/* SCHOLARSHIP CARDS */
-.sch-grid{display:grid;gap:14px}
-.sch-card{border-radius:14px;padding:1.25rem 1.5rem;border:1px solid}
-.sch-gold{background:#FFFBF0;border-color:#F5D080}
-.sch-gold h3{color:#7A4D00}
-.sch-gold p,.sch-gold li{color:#92600A}
-.sch-blue{background:#EFF6FF;border-color:#BFDBFE}
-.sch-blue h3{color:#1E3A8A}
-.sch-blue p,.sch-blue li{color:#1E40AF}
-.sch-green{background:var(--brand-light);border-color:#C3E6D2}
-.sch-green h3{color:var(--brand-dark)}
-.sch-green p,.sch-green li{color:#155724}
-.sch-purple{background:#F5F3FF;border-color:#DDD6FE}
-.sch-purple h3{color:#4C1D95}
-.sch-purple p,.sch-purple li{color:#5B21B6}
-.sch-card h3{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;margin-bottom:6px}
-.sch-card p{font-size:13px;line-height:1.5}
-.sch-card .sch-meta{display:flex;gap:16px;margin-top:10px;flex-wrap:wrap}
-.sch-meta span{font-size:12px;font-weight:600;padding:3px 10px;border-radius:100px;background:rgba(255,255,255,0.6)}
-
-/* CTA BOX */
-.cta-box{background:linear-gradient(135deg,#0F4A28,#2E9B5B);border-radius:20px;padding:2.5rem 2rem;text-align:center;margin:2rem 0}
-.cta-box h2{font-family:'Sora',sans-serif;font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:8px}
-.cta-box p{color:rgba(255,255,255,0.75);font-size:14px;margin-bottom:1.5rem}
-
-/* NOTIFY FORM */
-.notify-form{display:flex;gap:10px;max-width:420px;margin:0 auto;flex-wrap:wrap}
-.notify-form input[type=email]{flex:1;min-width:200px;padding:11px 14px;border-radius:10px;border:none;font-family:'Nunito',sans-serif;font-size:14px}
-.notify-form button{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:11px 20px;font-family:'Sora',sans-serif;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap}
-
-/* PAGE HERO (inner pages) */
-.page-hero{background:linear-gradient(135deg,#0F4A28,#1A6B3C);padding:3rem 1.5rem;text-align:center}
-.page-hero-inner{max-width:var(--max);margin:0 auto}
-.page-hero h1{font-family:'Sora',sans-serif;font-size:1.9rem;font-weight:700;color:#fff;margin-bottom:8px}
-.page-hero p{color:rgba(255,255,255,0.75);font-size:14px;max-width:560px;margin:0 auto}
-.breadcrumb{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px}
-.breadcrumb a{color:rgba(255,255,255,0.7)}
-.breadcrumb a:hover{color:#fff;text-decoration:none}
-
-/* ARTICLE CONTENT */
-.article-body h2{font-family:'Sora',sans-serif;font-size:1.25rem;font-weight:700;color:var(--brand-dark);margin:2rem 0 0.75rem;padding-top:1rem;border-top:1px solid var(--border)}
-.article-body h2:first-child{border-top:none;padding-top:0;margin-top:0}
-.article-body h3{font-family:'Sora',sans-serif;font-size:1rem;font-weight:700;color:var(--brand);margin:1.5rem 0 0.5rem}
-.article-body p{margin-bottom:1rem;color:var(--text2)}
-.article-body ul,.article-body ol{margin:0.75rem 0 1rem 1.25rem;color:var(--text2)}
-.article-body li{margin-bottom:6px;font-size:14px}
-.article-body strong{color:var(--text);font-weight:600}
-.info-box{background:var(--brand-light);border-left:4px solid var(--brand);border-radius:0 10px 10px 0;padding:1rem 1.25rem;margin:1.5rem 0}
-.info-box p{margin:0;font-size:13px;color:var(--brand-dark)}
-.warn-box{background:#FFFBF0;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;padding:1rem 1.25rem;margin:1.5rem 0}
-.warn-box p{margin:0;font-size:13px;color:#7A4D00}
-.table-wrap{overflow-x:auto;margin:1.5rem 0}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th{background:var(--brand);color:#fff;padding:10px 14px;text-align:left;font-family:'Sora',sans-serif;font-weight:600}
-td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text2)}
-tr:nth-child(even) td{background:var(--surface)}
-
-/* SIDEBAR LAYOUT */
-.content-wrap{display:grid;grid-template-columns:1fr 280px;gap:2rem;align-items:start}
-.sidebar{position:sticky;top:80px}
-.sidebar-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1rem}
-.sidebar-card h4{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--brand-dark);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-.sidebar-link{display:block;font-size:13px;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border)}
-.sidebar-link:last-child{border-bottom:none}
-.sidebar-link:hover{color:var(--brand);text-decoration:none}
-
-/* FOOTER */
-footer{background:var(--brand-dark);padding:3rem 1.5rem 2rem;margin-top:4rem}
-.footer-inner{max-width:var(--max);margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
-.footer-brand p{color:rgba(255,255,255,0.6);font-size:13px;margin-top:8px;line-height:1.6;max-width:260px}
-.footer-col h4{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:#fff;margin-bottom:12px}
-.footer-col a{display:block;color:rgba(255,255,255,0.6);font-size:13px;margin-bottom:8px}
-.footer-col a:hover{color:#fff;text-decoration:none}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.footer-bottom p{color:rgba(255,255,255,0.4);font-size:12px}
-.footer-bottom a{color:rgba(255,255,255,0.5);font-size:12px}
-.footer-logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;display:inline-flex;align-items:center;gap:0;line-height:1}
-.footer-logo .logo-cbse{color:#fff}
-.footer-logo .logo-parent{color:#7ECFA0}
-.footer-logo .logo-dot{color:var(--accent)}
-.footer-logo .logo-in{color:rgba(255,255,255,0.5);font-size:0.95rem}
-.footer-logo span{color:#7ECFA0}
-
-/* RESPONSIVE */
-@media(max-width:700px){
-  .nav-links{display:none}
-  .hamburger{display:block}
-  .hero h1{font-size:1.6rem}
-  .content-wrap{grid-template-columns:1fr}
-  .sidebar{position:static}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .card-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:480px){
-  .card-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .blog-grid{grid-template-columns:1fr}
-}
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand"><div class="footer-logo"><span class="logo-cbse">cbse</span><span class="logo-parent">parent</span><span class="logo-dot">.</span><span class="logo-in">in</span></div><p>India's trusted free resource for CBSE parents. Age eligibility, KV admissions, army schools, scholarships and board exam guides.</p></div>
+<div class="footer-col"><h4>Guides</h4><a href="age-eligibility.html">Age Eligibility</a><a href="kv-schools.html">KV Schools</a><a href="army-schools.html">Army Schools</a><a href="scholarships.html">Scholarships</a></div>
+<div class="footer-col"><h4>Resources</h4><a href="board-exams.html">Board Exams</a><a href="cbse-vs-icse.html">CBSE vs ICSE</a><a href="after-class10.html">After Class 10</a><a href="cuet-guide.html">CUET Guide</a><a href="study-tips.html">Study Tips</a></div>
+<div class="footer-col"><h4>More</h4><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a></div>
+</div>
+<div class="footer-bottom"><p>© 2025 cbseparent.in · Built with ❤️ by <a href="https://appspattarai.studio">Apps Pattarai</a></p><a href="privacy.html">Privacy Policy</a></div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>
