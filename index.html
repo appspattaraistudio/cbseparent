@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cbseparent.in — CBSE Age Eligibility Calculator, KV Schools, Scholarships & Parent Guide</title>
+<meta name="description" content="India's #1 free CBSE parent resource. Calculate your child's school eligibility age, explore KV & Army school admission guides, scholarships, and board exam tips.">
+<meta name="keywords" content="CBSE age eligibility, CBSE admission, KV school admission, army school, CBSE scholarship, NMMS, CBSE class 1 age, cbse parent guide">
+<meta property="og:title" content="cbseparent.in — CBSE Parent Guide"><meta property="og:description" content="Free CBSE age calculator + KV schools, army schools, scholarships and board exam guides for Indian parents."><meta property="og:type" content="website"><meta property="og:url" content="https://cbseparent.in">
+<link rel="canonical" href="https://cbseparent.in">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+<div class="nav-inner">
+<a href="index.html" class="nav-logo">📚 cbse<span>parent</span>.in</a>
+<div class="nav-links">
+<a href="index.html" class="active">Home</a>
+<a href="age-eligibility.html">Age Guide</a>
+<a href="kv-schools.html">KV Schools</a>
+<a href="army-schools.html">Army Schools</a>
+<a href="scholarships.html">Scholarships</a>
+<a href="board-exams.html">Board Exams</a>
+<a href="after-class10.html">After Class 10</a>
+<a href="blog.html" class="nav-cta">Blog</a>
+</div>
+<button class="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav" id="mobile-nav">
+<a href="index.html">🏠 Home</a><a href="age-eligibility.html">📅 Age Eligibility</a><a href="kv-schools.html">🏫 KV Schools</a><a href="army-schools.html">⭐ Army Schools</a><a href="scholarships.html">🎓 Scholarships</a><a href="board-exams.html">📝 Board Exams</a><a href="cbse-vs-icse.html">⚖️ CBSE vs ICSE</a><a href="after-class10.html">🚀 After Class 10</a><a href="cuet-guide.html">🎯 CUET Guide</a><a href="study-tips.html">💡 Study Tips</a><a href="blog.html">📰 Blog</a>
+</div>
+</nav>
+<div class="coming-soon-banner">
+<p><em>APP COMING SOON</em> Our free CBSE Parent app is almost ready! <button class="notify-btn" onclick="document.getElementById('notify-section').scrollIntoView({behavior:'smooth'})">Notify Me →</button></p>
+</div>
+
+<div class="hero">
+<div class="hero-inner">
+<div class="hero-badge"><span>Free Tool for Indian Parents</span></div>
+<h1>Know exactly when your child is <em>school-ready</em></h1>
+<p>CBSE age eligibility calculator, KV & Army school admission guides, scholarships decoded — all free, no login needed.</p>
+<div class="hero-btns">
+<a href="#calculator" class="btn-primary">Try Age Calculator ↓</a>
+<a href="blog.html" class="btn-secondary">Read Parent Blog</a>
+</div>
+<p class="hero-note">App coming soon on Google Play · No ads · Works offline</p>
+</div>
+</div>
+
+<div class="stats-bar">
+<div class="stats-inner">
+<div class="stat-item"><div class="stat-num">27,000+</div><div class="stat-label">CBSE Schools in India</div></div>
+<div class="stat-item"><div class="stat-num">1,250+</div><div class="stat-label">Kendriya Vidyalayas</div></div>
+<div class="stat-item"><div class="stat-num">137</div><div class="stat-label">Army Public Schools</div></div>
+<div class="stat-item"><div class="stat-num">₹12,000</div><div class="stat-label">NMMS Scholarship/Year</div></div>
+</div>
+</div>
+
+<div class="calc-float" id="calculator">
+<div class="calc-card">
+<h2>🎯 CBSE School Readiness Calculator</h2>
+<p class="sub">Enter your child's date of birth — get the complete academic timeline with admission years</p>
+<div class="dob-row">
+<input type="date" id="dob-input" max="2025-12-31" placeholder="Child's Date of Birth">
+<button onclick="calcTimeline()">Calculate Timeline</button>
+</div>
+<div id="calc-result">
+<p class="result-title">Your child's academic journey</p>
+<div class="timeline" id="timeline-grid"></div>
+<p style="font-size:12px;color:var(--text3);margin-top:10px">* Based on CBSE standard age cutoff of 31st March. Individual schools may vary.</p>
+</div>
+</div>
+</div>
+
+<div class="page-wrap">
+<div class="section">
+<p class="section-label">Everything you need</p>
+<div class="section-title">CBSE Parent Resource Hub</div>
+<p class="section-sub">Trusted guides written for Indian parents navigating CBSE schools, admissions, exams, and scholarships.</p>
+<div class="card-grid">
+<a href="age-eligibility.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+<h3>Age Eligibility Guide</h3>
+<p>Complete CBSE age cutoff rules for Pre-KG to Class 12. Know exactly when your child can enrol.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="kv-schools.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+<h3>KV Schools Complete Guide</h3>
+<p>Priority list, lottery system, fees, and step-by-step online application for Kendriya Vidyalayas.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="army-schools.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+<h3>Army & Defence Schools</h3>
+<p>APS, RMS, and Sainik School admission guide for defence families and civilians.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="scholarships.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+<h3>Scholarships Guide</h3>
+<p>NMMS, CSSS, Single Girl Child, NSP — all scholarships your CBSE child can apply for.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="board-exams.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+<h3>Board Exam Guide</h3>
+<p>Class 10 & 12 exam dates, passing criteria, compartment rules, and result checking.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="cbse-vs-icse.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+<h3>CBSE vs ICSE vs State Board</h3>
+<p>Detailed comparison to help you choose the right board for your child's future.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="after-class10.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+<h3>After Class 10 Guide</h3>
+<p>Science, Commerce or Arts? Stream selection guide with career paths explained for parents.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="cuet-guide.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+<h3>CUET Guide for Parents</h3>
+<p>What is CUET, how it works, and how to prepare your child for central university admissions.</p>
+<span class="card-link">Read guide →</span>
+</a>
+<a href="study-tips.html" class="card" style="text-decoration:none">
+<div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#1A6B3C" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+<h3>Study Tips & Timetables</h3>
+<p>Proven study strategies, timetable templates, and stress management tips for CBSE students.</p>
+<span class="card-link">Read guide →</span>
+</a>
+</div>
+</div>
+
+<div class="section" style="padding-top:0">
+<p class="section-label">Latest from the blog</p>
+<div class="section-title">News, Tips & Updates</div>
+<p class="section-sub">Fresh content for CBSE parents and students every week.</p>
+<div class="blog-grid">
+<a href="blog/cbse-two-board-exams-2026.html" class="blog-card" style="text-decoration:none">
+<div class="blog-card-body"><span class="blog-tag news">News</span><h3>CBSE to Conduct Two Board Exams Per Year from 2025–26</h3><p>Everything parents need to know about the new dual-exam pattern announced by CBSE.</p></div>
+<div class="blog-card-meta"><span>Dec 2024</span><span>5 min read</span></div>
+</a>
+<a href="blog/kv-admission-2025-tips.html" class="blog-card" style="text-decoration:none">
+<div class="blog-card-body"><span class="blog-tag kv">KV</span><h3>KV Admission 2025–26: 10 Tips to Maximise Your Child's Chances</h3><p>Practical advice from parents who successfully got their children into Kendriya Vidyalayas.</p></div>
+<div class="blog-card-meta"><span>Nov 2024</span><span>7 min read</span></div>
+</a>
+<a href="blog/nmms-scholarship-guide.html" class="blog-card" style="text-decoration:none">
+<div class="blog-card-body"><span class="blog-tag scholarship">Scholarship</span><h3>NMMS 2025: Complete Guide — Eligibility, Exam Date & How to Apply</h3><p>Step-by-step guide to help your Class 8 child apply for the ₹12,000/year NMMS scholarship.</p></div>
+<div class="blog-card-meta"><span>Oct 2024</span><span>8 min read</span></div>
+</a>
+</div>
+<div style="text-align:center;margin-top:1.5rem"><a href="blog.html" class="btn-primary" style="display:inline-flex">View All 100+ Articles →</a></div>
+</div>
+
+<div class="section" style="padding-top:0">
+<p class="section-label">Common questions</p>
+<div class="section-title">Parents Ask Us</div>
+<div class="faq-list">
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the minimum age for Class 1 in CBSE schools?<span class="toggle">+</span></div><div class="faq-a">As per CBSE norms, a child must be at least 6 years old as of 31st March of the admission year to enrol in Class 1. For Pre-KG the minimum is 3 years, LKG is 4 years, and UKG is 5 years. Private affiliated schools may set higher minimum ages but cannot go below the CBSE minimum.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">How does the KV lottery system work?<span class="toggle">+</span></div><div class="faq-a">When more children apply than seats available within a priority category, KV conducts a computerised lottery. The lottery is transparent and results are published on the KVS portal. Priority 1 (service children) seats are filled first, then Priority 2, and so on. Lottery is held category-wise, not across all applicants together.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What is the difference between CBSE and ICSE boards?<span class="toggle">+</span></div><div class="faq-a">CBSE (Central Board of Secondary Education) is run by the central government, follows NCERT syllabus, and is accepted across all central universities. ICSE (Indian Certificate of Secondary Education) is run by CISCE, has a broader syllabus with more emphasis on English. CBSE is better for competitive exams like JEE/NEET; ICSE is better for students going abroad or pursuing humanities.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Which scholarships are available for CBSE Class 8 students?<span class="toggle">+</span></div><div class="faq-a">The most important scholarship for Class 8 students is NMMS (National Means-cum-Merit Scholarship), which provides ₹12,000/year for Class 9–12. Students from economically weaker sections with at least 55% marks in Class 7 are eligible. The state-level exam is held every year in November–December.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Can a civilian child get admission in Army Public Schools?<span class="toggle">+</span></div><div class="faq-a">Yes, civilian children can get admission in Army Public Schools (APS) but only in the general category, which is limited to 25–30% of total seats after defence children are accommodated. RMS (Rashtriya Military Schools) also reserves a small percentage of seats for civilian boys. The entrance exam for APS is the All India Army Public Schools Common Entrance Exam (AISCE).</div></div>
+<div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">What happens if a child fails the CBSE Class 10 board exam?<span class="toggle">+</span></div><div class="faq-a">If a student fails in 1–2 subjects in CBSE Class 10, they are eligible for the Compartment Exam held in July. If they pass the compartment exam, they receive a passing certificate. If they fail in 3 or more subjects, they must repeat Class 10. CBSE also has an improvement exam option for students who want to improve their marks.</div></div>
+</div>
+</div>
+
+<div class="cta-box" id="notify-section">
+<h2>📱 App Launching Soon on Google Play</h2>
+<p>Get notified the moment our free CBSE Parent app goes live. Age calculator, offline access, push alerts for admission deadlines.</p>
+<form class="notify-form" onsubmit="submitNotify(event)">
+<input type="email" id="notify-email" placeholder="your@email.com" required>
+<button type="submit">Notify Me 🔔</button>
+</form>
+</div>
+</div>
+
+<footer>
+<div class="footer-inner">
+<div class="footer-grid">
+<div class="footer-brand"><div class="footer-logo">📚 cbse<span>parent</span>.in</div><p>India's trusted free resource for CBSE parents. Age eligibility, KV admissions, army schools, scholarships and board exam guides.</p></div>
+<div class="footer-col"><h4>Guides</h4><a href="age-eligibility.html">Age Eligibility</a><a href="kv-schools.html">KV Schools</a><a href="army-schools.html">Army Schools</a><a href="scholarships.html">Scholarships</a></div>
+<div class="footer-col"><h4>Resources</h4><a href="board-exams.html">Board Exams</a><a href="cbse-vs-icse.html">CBSE vs ICSE</a><a href="after-class10.html">After Class 10</a><a href="cuet-guide.html">CUET Guide</a><a href="study-tips.html">Study Tips</a></div>
+<div class="footer-col"><h4>More</h4><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="privacy.html">Privacy Policy</a></div>
+</div>
+<div class="footer-bottom"><p>© 2025 cbseparent.in · Built with ❤️ by <a href="https://appspattarai.studio">Apps Pattarai</a></p><a href="privacy.html">Privacy Policy</a></div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>
