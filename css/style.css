@@ -14,14 +14,14 @@ img{max-width:100%}
 
 /* NAV */
 nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.nav-inner{max-width:var(--max);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:58px}
-.nav-logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.15rem;color:var(--brand-dark);display:inline-flex;align-items:center;gap:0;line-height:1;text-decoration:none}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
+.nav-logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.15rem;color:var(--brand-dark);display:inline-flex;align-items:center;gap:0;line-height:1;text-decoration:none;flex-shrink:0}
 .nav-logo .logo-cbse{color:var(--brand-dark)}
 .nav-logo .logo-parent{color:var(--brand-mid)}
 .nav-logo .logo-dot{color:var(--accent)}
 .nav-logo .logo-in{color:var(--text3);font-size:0.95rem}
-.nav-links{display:flex;gap:4px;align-items:center}
-.nav-links a{font-size:13px;font-weight:600;color:var(--text2);padding:6px 10px;border-radius:8px;font-family:'Sora',sans-serif}
+.nav-links{display:flex;gap:2px;align-items:center;flex-wrap:nowrap}
+.nav-links a{font-size:12px;font-weight:600;color:var(--text2);padding:5px 6px;border-radius:8px;font-family:'Sora',sans-serif;white-space:nowrap}
 .nav-links a:hover{background:var(--brand-light);color:var(--brand);text-decoration:none}
 .nav-links a.active{color:var(--brand);background:var(--brand-light)}
 .nav-cta{background:var(--brand);color:#fff!important;border-radius:8px;padding:7px 14px!important}
