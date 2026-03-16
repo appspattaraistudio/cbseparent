@@ -15,7 +15,7 @@ img{max-width:100%}
 /* NAV */
 nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:58px;gap:12px}
-.nav-logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.15rem;color:var(--brand-dark);display:inline-flex;align-items:center;gap:0;line-height:1;text-decoration:none;flex-shrink:0}
+.nav-logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.1rem;color:var(--brand-dark);display:inline-flex;align-items:baseline;gap:0;line-height:1;text-decoration:none;flex-shrink:0;white-space:nowrap}
 .nav-logo .logo-cbse{color:var(--brand-dark)}
 .nav-logo .logo-parent{color:var(--brand-mid)}
 .nav-logo .logo-dot{color:var(--accent)}
